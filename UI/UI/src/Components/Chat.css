@@ -1,0 +1,149 @@
+/* ✅ Chat Section */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: calc(100vh - 195px); /* Adjusted height for better fit */
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* Prevents full-page scrolling */
+}
+
+/* ✅ Chat Messages (Reduced Height for Input Field) */
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto; /* Enables scrolling */
+  padding: 10px;
+  max-height: calc(100vh - 220px); /* Reduced height to make space */
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding-bottom: 50px;
+}
+
+/* ✅ Chat Input Section (Fixed at Bottom) */
+.chat-input-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  z-index: 10;
+}
+
+/* ✅ Input & Button Wrapper */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 5px;
+  margin: auto;
+}
+
+/* ✅ Chat Input */
+.chat-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  background-color: transparent;
+}
+
+/* ✅ Send Button */
+.send-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+/* ✅ Individual Chat Message */
+.chat-message {
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  max-width: 75%;
+  word-wrap: break-word;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+
+.chat-message:hover {
+  transform: scale(1.02);
+}
+
+/* ✅ Alternating Backgrounds for Messages */
+.chat-message:nth-child(even) {
+  background: #e3f2fd;
+}
+
+/* ✅ Chat Header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Sender Name */
+.chat-header strong {
+  font-weight: 600;
+  color: #007bff;
+  font-size: 14px;
+}
+
+/* Timestamp */
+.chat-time {
+  font-size: 12px;
+  color: #777;
+  margin-left: 10px;
+}
+
+/* ✅ Chat Text */
+.chat-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Delete Button */
+.delete-button {
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-50%); /* Center vertically */
+  background: none;
+  border: none;
+  color: red;
+  font-size: 14px;
+  cursor: pointer;
+  width: auto; /* Keep width small */
+  padding: 5px;
+  transition: color 0.2s ease-in-out;
+}

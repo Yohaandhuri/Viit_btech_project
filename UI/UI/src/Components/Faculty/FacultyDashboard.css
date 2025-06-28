@@ -1,0 +1,112 @@
+.faculty-dashboard {
+  padding: 3rem 2rem 2rem; /* Added space between navbar and content */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f9ff;
+  min-height: 100vh;
+}
+
+/* Faculty Info Card */
+.faculty-info {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-top: 2rem; /* Added margin-top for space between navbar and the info section */
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-info h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.faculty-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem 2rem;
+}
+
+.faculty-info-grid p {
+  font-size: 1rem;
+  color: #333;
+  background-color: #f0f4ff;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+/* Courses Section */
+.my-courses {
+  padding: 2rem; /* Added padding for more space */
+  border: 2px solid #3498db; /* Border around the component */
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem; /* Added margin-top for space between the faculty info and courses section */
+}
+
+.my-courses h3 {
+  text-align: center; /* Centered "My Courses" text */
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #34495e;
+}
+
+/* Grid layout for course cards */
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 1.5rem; /* Consistent spacing between the cards */
+  padding: 0 1.5rem; /* Padding inside the course list for proper alignment */
+}
+
+.course-card {
+  background-color: #ffffff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border-left: 5px solid #3498db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  background-color: #f0faff;
+}
+
+.course-card h4 {
+  margin-bottom: 0.5rem;
+  color: #2980b9;
+  font-size: 1.2rem;
+}
+
+.course-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.chat-toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 998;
+  width: 60px;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

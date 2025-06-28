@@ -1,0 +1,186 @@
+.quiz-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Remove grid layout and use vertical stacking */
+.quiz-list-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quiz-tile {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #4caf50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.quiz-tile:hover {
+    transform: translateY(-4px);
+    background-color: #f1f8f2;
+}
+
+.quiz-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2e7d32;
+}
+
+.quiz-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.loading,
+.error,
+.no-quiz {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+}
+
+.quiz-content {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100px;
+    height: 40px;
+}
+
+.delete-btn:hover {
+    background-color: #c62828;
+}
+
+.edit-btn {
+    background-color: #10a00b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.edit-btn:hover {
+    background-color: #297c15;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.add-quiz-btn {
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.add-quiz-btn:hover {
+    background-color: #45a049;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal input,
+.modal textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.modal textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+.modal-buttons button:first-child {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #e53935;
+    color: white;
+}

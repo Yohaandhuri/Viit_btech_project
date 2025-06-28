@@ -1,0 +1,247 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 16px;
+    margin: 10px 6px 0 0;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+/* Form Headers */
+.modal h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Each Question Container */
+.modal > div {
+    margin-bottom: 20px;
+}
+
+/* Input and Select */
+input[type="text"], select {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+/* Input Fields: Full Width */
+input[type="text"] {
+    width: 100%; /* Full width */
+}
+
+/* Select Field: 30% Width */
+select {
+    width: 30%;
+}
+
+/* Individual Question Styling */
+.question-block {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+    width: 95%;
+}
+
+/* Background Dim When Modal Open */
+body::before {
+    content: '';
+    display: none;
+}
+
+.modal + body::before {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+/* Open Modal Button */
+.open-modal-btn {
+    margin-top: 40px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 180px;
+    z-index: 1001;
+}
+
+.open-modal-btn:hover {
+    background-color: #0d47a1;
+}
+
+/* Add Another Question Button - Blue */
+.button-container > button:nth-child(1) {
+    background-color: #1976d2;
+}
+
+.button-container > button:nth-child(1):hover {
+    background-color: #0d47a1;
+}
+
+/* Submit Questions Button - Green */
+.button-container > button:nth-child(2) {
+    background-color: #388e3c;
+}
+
+.button-container > button:nth-child(2):hover {
+    background-color: #1b5e20;
+}
+
+/* Cancel Button - Red */
+.button-container > button:nth-child(3) {
+    background-color: #d32f2f;
+    width: 150px;
+    margin-left: auto;
+}
+
+.button-container > button:nth-child(3):hover {
+    background-color: #b71c1c;
+}
+
+/* Fetched Questions Styling */
+.fetched-questions {
+    margin-top: 80px;
+    
+}
+
+.fetched-questions .question-block {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fffbfb;
+    border-radius: 6px;
+}
+
+/* Align Radio Buttons and Text Left */
+.fetched-questions .question-block label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 4px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Ensure radio buttons are sized appropriately and aligned */
+.fetched-questions input[type="radio"] {
+    margin-right: 10px; /* Space between radio button and label */
+    transform: scale(1.2); /* Optional: Increase radio button size */
+}
+
+/* Ensure the question text itself is aligned correctly */
+.fetched-questions .question-block p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* Styling for options */
+.fetched-questions .question-block label {
+    font-size: 16px;
+    padding: 6px;
+}
+
+/* Remove extra space on left of the modal when it opens */
+body {
+    padding-left: 10px;
+}
+
+.submit-my-answers {
+    width: 200px;
+}
+
+.submit-answers {
+    padding-bottom: 10px;
+}
+
+.calculate-scores {
+    width: 200px;
+    padding-right: 10px;
+}
+
+.quiz-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.quiz-timer {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d9534f;
+    background: #f9f9f9;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.view-score-button {
+    width: 200px;
+    margin-bottom: 20px;
+}

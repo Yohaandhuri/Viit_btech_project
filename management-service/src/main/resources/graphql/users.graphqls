@@ -1,0 +1,87 @@
+scalar UUID
+
+enum StatusEnum {
+    ACTIVE
+    INACTIVE
+    PENDING
+}
+
+enum RoleEnum {
+    TEACHER,
+    STUDENT,
+    ADMIN
+}
+
+enum GenderEnum{
+    MALE,
+    FEMALE,
+    OTHER
+}
+
+type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    roleId: Int
+    dob: String
+    phoneNumber: String
+    status: StatusEnum!
+    role: RoleEnum!
+    gender: GenderEnum!
+    creatorId: ID
+    sem: Int
+}
+
+type Query {
+    getUsers: [User!]!
+    getUsersSpecific(role:RoleEnum!): [User!]!
+    getUser(id: ID!): User
+    getUserCourses(userId:ID): [Course]!
+    loginUser(loginInput:LoginInput): ID
+}
+
+type Mutation {
+    registerUser(userInput: UserInput): String!
+    editUser(editUserInput: EditUserInput): String!
+    resetPassword(resetPasswordInputDto: ResetPasswordInputDto): String
+}
+
+input LoginInput {
+    email:String!,
+    password:String!
+}
+
+input UserInput{
+    firstName: String!
+    lastName: String!
+    email: String!
+    dob: String
+    gender: GenderEnum
+    phoneNumber: String
+    status: StatusEnum!
+    role: RoleEnum!
+    creatorId: ID!
+    password: String
+    sem: Int
+}
+
+input EditUserInput {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    dob: String!
+    phoneNumber: String!,
+    gender: GenderEnum!,
+    updatedBy: ID
+}
+
+input ResetPasswordInputDto{
+    userId:ID!
+    role: RoleEnum!
+    editedBy: ID!
+    oldPassword: String
+    newPassword:String!
+}
+

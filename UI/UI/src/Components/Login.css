@@ -1,0 +1,97 @@
+/* Ensures full-page responsiveness */
+body {
+  background: url("https://cdn.pixabay.com/photo/2016/04/21/17/19/board-1343694_1280.jpg") no-repeat center center;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centers the login box */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chalkboard-style login box */
+.login-box {
+  background-color: rgba(44, 62, 80, 0.9); /* Dark chalkboard color */
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Subtext */
+.login-subtext {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ecf0f1;
+}
+
+/* Input Fields - Ensuring consistent width */
+input {
+  width: 100%;  /* Ensures inputs take full width */
+  max-width: 350px; /* Prevents over-expansion */
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  text-align: center;
+  display: block;  /* Ensures inputs stack properly */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Login Button - Matching Input Width */
+.login-btn {
+  width: 100%;  /* Makes it the same width as inputs */
+  max-width: 350px; /* Same max width as inputs */
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  background-color: #3498db;
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.forgot-password a {
+  color: #f39c12;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}

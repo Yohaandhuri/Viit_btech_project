@@ -1,0 +1,51 @@
+.score-page {
+    background-color: white;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.score-title {
+    text-align: center;
+    font-size: 2em;
+    color: #2e3d49;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+.score-table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #fffdf6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.score-table th,
+.score-table td {
+    padding: 12px 20px;
+    border: 1px solid #d6cfc7;
+    text-align: center;
+}
+
+.score-table thead {
+    background-color: #dbe6d1;
+}
+
+.score-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.score-table tbody tr:hover {
+    background-color: #e1f5c4;
+}

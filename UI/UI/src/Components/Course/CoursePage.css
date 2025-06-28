@@ -1,0 +1,43 @@
+.course-page {
+  padding: 20px 40px;
+  margin-top: 80px; /* Added top margin to create space between navbar and content */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.add-course-btn {
+  display: block;
+  margin: 0 auto 30px auto;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.course-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.course-card {
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  padding: 16px;
+  width: 200px;
+  text-align: center;
+  background-color: #ecf0f1;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,105 @@
+/* Modal overlay and content remain the same */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(5px); /* blur the background */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px; /* modal width */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modal heading */
+  .modal-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  /* Form input fields */
+  .modal-content form .input-field {
+    margin-bottom: 15px;
+  }
+  
+  /* Grouping fields in rows */
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  /* Labels */
+  .modal-content form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Input styling */
+  .modal-content form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Centering the buttons */
+  .modal-content form .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between the buttons */
+    margin-top: 20px;
+  }
+  
+  /* Button styling */
+  .modal-content form button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    width: auto; /* Let the buttons take their natural width */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .modal-content form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Green "Save Changes" Button */
+  .modal-content form button.save-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .modal-content form button.save-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Red "Cancel" Button */
+  .cancel-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e53935;
+  }
+  
